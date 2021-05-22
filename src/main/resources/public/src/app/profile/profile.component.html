@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+
+<form class="input-group container" (ngSubmit)="upload()">
+  <div class="custom-file">
+    <input type="file" name="profile-picture" class="custom-file-input" (change)="fileChosen($event)">
+    <label class="custom-file-label" for="profile-upload">Choose file</label>
+  </div>
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="submit">Upload</button>
+  </div>
+</form>
+
+<table class="table container mt-5">
+  <tbody>
+    <tr>
+      <td class="col-sm">
+        Full Name
+      </td>
+      <td class="col-sm">
+        {{user.firstName}} {{user.lastName}}
+      </td>
+    </tr>
+
+    <tr>
+      <td class="col-sm">
+        Username
+      </td>
+      <td class="col-sm">
+        {{user.username}}
+      </td>
+    </tr>
+
+    <tr>
+      <td class="col-sm">
+        Email
+      </td>
+      <td class="col-sm">
+        {{user.email}}
+      </td>
+    </tr>
+
+    <tr>
+      <td class="col-sm">
+        Would you like to log out?
+      </td>
+      <td class="col-sm">
+        <button class="btn-outline-secondary btn" (click)="logout()">Yes</button>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+

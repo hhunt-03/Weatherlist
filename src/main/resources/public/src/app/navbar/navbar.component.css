@@ -1,0 +1,37 @@
+h1 {
+    text-align: left;
+    font-family: 'Josefin Sans', sans-serif;
+
+    color: whitesmoke;
+}
+
+.user-icon {
+    width: inherit;
+    height: inherit;
+}
+
+.header{
+    background-color: #891109;
+    background-size: 100%;
+
+    color: whitesmoke;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+nav {
+    background-color: #891109;
+    background-size: 100%;
+
+    color: whitesmoke;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.carousel {
+    background-size: 100%;
+}
+
+.link:hover {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+}
+

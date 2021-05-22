@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+
+<p>{{errorMessage}}</p>
+<form class="container">
+    <input name="username" placeholder="username" type="text" class="mt-4" [(ngModel)]="username">
+    <input name="password" placeholder="password" type="password" class="mt-2" [(ngModel)]="password">
+    <button type="submit" class="btn btn-secondary mt-3" (click)="login($event)">Login</button>
+</form>

@@ -1,0 +1,21 @@
+<div class="temp container p-5 mb-4 border rounded">
+    <div class="input-group mb-3 container">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="locations">Select Location</label>
+        </div>
+        <select name="selectedLocation" class="custom-select" [(ngModel)]="selectedLocation">
+            <option *ngFor="let location of locations" [ngValue]="location">{{location?.areaDescription}}</option>
+        </select>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" (click)="addLocation()">Add New Location</button>
+        </div>
+    </div>
+
+    <div *ngIf="selectedLocation.areaDescription" class="container description">
+        <h2 class="text-center">{{selectedLocation.areaDescription}}</h2>
+        <p class="text-center">{{selectedLocation.temperature}} degrees. {{selectedLocation.text[0]}}</p> 
+        <div class="text-center">
+            <button class="btn btn-outline-secondary" type="button" (click)="deleteLocation()">Delete Location</button>
+        </div>
+    </div>
+</div>

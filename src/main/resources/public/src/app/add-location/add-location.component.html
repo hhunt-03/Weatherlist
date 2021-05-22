@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+
+<form class="input-group container">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Latitude and Longitude</span>
+    </div>
+    <input type="text" name="long" class="form-control" [(ngModel)]="latitude">
+    <input type="text" name="lat" class="form-control" [(ngModel)]="longitude">
+    <div class="input-group-append">
+        <button type="button" class="btn btn-outline-secondary" (click)="findLocation(longitude, latitude)">Find</button>
+    </div>
+</form>
+
+<h2 class="container mt-3 text-center error">{{errorMessage}}</h2>
+<div *ngIf="foundLocation" class="container mt-3 text-center found">
+  <h2>{{foundLocation.areaDescription}}</h2>
+  <p>{{foundLocation.temperature}} degrees.  {{foundLocation.text[0]}}</p>
+  <button type="button" class="btn btn-outline-secondary" (click)="addLocation(foundLocation)">Save Location</button>
+</div>

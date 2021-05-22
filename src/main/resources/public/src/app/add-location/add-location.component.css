@@ -1,0 +1,9 @@
+.found {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.error {
+    font-family: 'Josefin Sans', sans-serif;
+    color: red;
+    font-size: small;
+}
